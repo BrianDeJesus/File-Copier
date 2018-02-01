@@ -1,17 +1,17 @@
 /*
 Brian DeJesus
-File copy program
+CS433 operating systems
 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
 
 int main(int argc, char **argv) {
-
+  
   char data[200] = {0}; //Buffer
   int fd1, fd2; //File descriptors
   ssize_t rd; //Bytes read variable
-
+  
   if(argc != 3) {
     fprintf(stderr, "Usage: %s <sourcefile> <destinationfile>\n", argv[0]);
     return -1;
