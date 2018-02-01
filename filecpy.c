@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
   fd1 = open(sourcefile, O_RDONLY); // Open source file
   if(fd1 < 0) {
     fprintf(stderr, "Error opening the source file");
+    return -1;
   }
 
   fd2 = open(destinationfile, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR); // Open destination file. Create one if it doesn't exist
