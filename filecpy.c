@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
     fprintf(stderr, "Error opening the source file");
   }
 
-  fd2 = open(destinationfile, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR); // Open destination file
+  fd2 = open(destinationfile, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR); // Open destination file. Create one if it doesn't exist
   if(fd2 < 0) { 
     fprintf(stderr, "Error creating or writing to destination file");
     return -1;
