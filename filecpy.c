@@ -1,6 +1,6 @@
 /*
 Brian DeJesus
-CS433 operating systems
+File copy program
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
   }
   printf("Successfully copied file!! \n");
 
-  while(rd = read(fd1, data, sizeof(data))) { //Read data byte by byte then write byte by byte
+  while(rd = read(fd1, data, sizeof(data))) { // Read data byte by byte from source then write byte by byte into destination
     write(fd2, data, rd);
   }
 
