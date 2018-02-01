@@ -17,18 +17,18 @@ int main(int argc, char **argv) {
     return -1;
   }
 
-  char *sourcefile = argv[1];
-  char *destinationfile = argv[2];
+  char *source_file = argv[1];
+  char *destination_file = argv[2];
 
-  printf("Source file: %s \nDestination file: %s \n", sourcefile, destinationfile);
+  printf("Source file: %s \nDestination file: %s \n", source_file, destination_file);
 
-  fd1 = open(sourcefile, O_RDONLY); // Open source file
+  fd1 = open(source_file, O_RDONLY); // Open source file
   if(fd1 < 0) {
     fprintf(stderr, "Error opening the source file");
     return -1;
   }
 
-  fd2 = open(destinationfile, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR); // Open destination file. Create one if it doesn't exist
+  fd2 = open(destination_file, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR); // Open destination file. Create one if it doesn't exist
   if(fd2 < 0) { 
     fprintf(stderr, "Error creating or writing to destination file");
     return -1;
